@@ -1,6 +1,8 @@
 package com.koweg.simulation;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,7 +21,7 @@ public class DiceRollSimulationController {
   }
 
   @ExceptionHandler(InvalidParameterException.class)
-  public ErrorResponse handleException(Exception ex) {
-    return new ErrorResponse(ex.getMessage());
+  public ResponseEntity<ErrorResponse> handleException(Exception ex) {
+    return new ResponseEntity<>(new ErrorResponse(ex.getMessage()), HttpStatus.UNPROCESSABLE_ENTITY);
   }
 }
