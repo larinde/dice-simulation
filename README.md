@@ -56,6 +56,8 @@ __RESPONSE__
 
 ### Error scenario
 
+Constraint violation on minimum number of dice.
+
 __REQUEST__
 
 ```bash
@@ -63,6 +65,8 @@ __REQUEST__
 ```
 
 __RESPONSE__
+
+Server returns a 422 error response code
 
 ```json
 {
