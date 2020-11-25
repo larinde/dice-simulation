@@ -66,21 +66,6 @@ __RESPONSE__
 
 ```json
 {
-  "outcomes": [{
-    "total": 17,
-    "frequency": 1
-  }, {
-    "total": 7,
-    "frequency": 1
-  }, {
-    "total": 10,
-    "frequency": 1
-  }, {
-    "total": 13,
-    "frequency": 1
-  }, {
-    "total": 14,
-    "frequency": 1
-  }]
+  "message": "Die must have a minimum of 4 sides"
 }
 ```
