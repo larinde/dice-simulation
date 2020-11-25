@@ -17,32 +17,55 @@ The running application is accessible through the default container port - 8080.
 
 ## Running a simulation from the command line:
 
+### Happy path scenario
+
 __REQUEST__
 
 ```bash
- http://localhost:8080/api/simulations/numberOfDice/3/numberOfSidesPerDie/6/numberOfDiceRolls/5
+ curl -X POST -i http://localhost:8080/api/simulations/numberOfDice/3/numberOfSidesPerDie/6/numberOfDiceRolls/10
 ```
-The response is a JSON payload containing the created order resource id
 
 __RESPONSE__
 
 ```json
 {
   "outcomes": [{
-    "total": 17,
+    "total": 4,
     "frequency": 1
   }, {
-    "total": 7,
+    "total": 8,
     "frequency": 1
+  }, {
+    "total": 9,
+    "frequency": 3
   }, {
     "total": 10,
     "frequency": 1
   }, {
-    "total": 13,
+    "total": 12,
     "frequency": 1
   }, {
-    "total": 14,
+    "total": 13,
+    "frequency": 2
+  }, {
+    "total": 15,
     "frequency": 1
   }]
+}
+```
+
+### Error scenario
+
+__REQUEST__
+
+```bash
+ curl -X POST -i http://localhost:8080/api/simulations/numberOfDice/3/numberOfSidesPerDie/3/numberOfDiceRolls/10
+```
+
+__RESPONSE__
+
+```json
+{
+  "message": "Die must have a minimum of 4 sides"
 }
 ```
