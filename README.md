@@ -2,7 +2,7 @@
 
 | Action                     | HTTP Method   | URI                                                                                                                          |
 |:---------------------------|:-------------:|:-----------------------------------------------------------------------------------------------------------------------------|
-| Place an order             |  POST         | /api/simulations/numberOfDice/{numberOfDice}/numberOfSidesPerDie/{numberOfSidesPerDie}/numberOfDiceRolls/{numberOfDiceRolls} |              |
+| Run a dice simulation      |  POST         | /api/simulations/numberOfDice/{numberOfDice}/numberOfSidesPerDie/{numberOfSidesPerDie}/numberOfDiceRolls/{numberOfDiceRolls} |              |
 
 
 ## Building and deploying the app
