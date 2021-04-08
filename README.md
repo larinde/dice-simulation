@@ -22,7 +22,7 @@ The running application is accessible through the default container port - 8080.
 __REQUEST__
 
 ```bash
- curl -X POST -i http://localhost:8080/api/simulations/numberOfDice/3/numberOfSidesPerDie/6/numberOfDiceRolls/10
+ curl -X POST -i http://localhost:7000/api/simulations/numberOfDice/3/numberOfSidesPerDie/6/numberOfDiceRolls/10
 ```
 
 __RESPONSE__
