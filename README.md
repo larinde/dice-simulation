@@ -8,7 +8,7 @@
 ## Building and deploying the app
 
 This implementation is based on Spring Boot and embedded Tomcat container frameworks.
-The running application is accessible through the default container port - 8080.
+The running application is accessible through the default container port - 7000
 
 ```bash
  mvn clean package
@@ -61,7 +61,7 @@ Constraint violation on minimum number of dice.
 __REQUEST__
 
 ```bash
- curl -X POST -i http://localhost:8080/api/simulations/numberOfDice/3/numberOfSidesPerDie/3/numberOfDiceRolls/10
+ curl -X POST -i http://localhost:7000/api/simulations/numberOfDice/3/numberOfSidesPerDie/3/numberOfDiceRolls/10
 ```
 
 __RESPONSE__
