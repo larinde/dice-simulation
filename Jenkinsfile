@@ -12,10 +12,10 @@ pipeline {
         booleanParam(name: 'executeTests', defaultValue: true, description: 'execute unit tests when true')
     }
 
-    tools {
+    //tools {
         //smaven 'Maven3'
         //jdk 'JDK'
-    }
+    //}
 
     triggers {
         pollSCM "*/10 * * * *"
