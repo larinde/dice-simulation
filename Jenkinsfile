@@ -42,11 +42,11 @@ pipeline {
 
         stage("test") {
             when{
-                params.executeTests true
+                //params.executeTests true
                 expression{
-                    BRANCH_NAME ==~ /(dev|master)/
+                    BRANCH_NAME ==~ /(dev|main)/
                 }
-                    //expression{ env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'master' }
+                    //expression{ env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'main' }
             }
             steps{
                 echo '### testing artifact ###'
