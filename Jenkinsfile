@@ -13,8 +13,8 @@ pipeline {
     }
 
     tools {
-        maven 'Maven'
-        jdk 'JDK'
+        //smaven 'Maven3'
+        //jdk 'JDK'
     }
 
     triggers {
