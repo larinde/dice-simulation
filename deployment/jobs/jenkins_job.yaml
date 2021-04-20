@@ -4,4 +4,4 @@
     scm:
       - git:
           url: 'https://github.com/larinde/dice-simulation.git'
-          head-filter-regex: 'main|dev|feature-.*'
+          head-filter-regex: 'master|dev|feature-.*'
