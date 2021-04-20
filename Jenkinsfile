@@ -5,7 +5,7 @@ pipeline {
     environment {
         HARBOR_URL = 'http://...'
         //requires "Credentials Binding" Plugin
-        SERVER_CREDENTIALS = credentials('gitlab-credentials')
+        //SERVER_CREDENTIALS = credentials('gitlab-credentials')
     }
 
     parameters {
