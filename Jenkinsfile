@@ -18,7 +18,7 @@ pipeline {
     //}
 
     triggers {
-        pollSCM "*/10 * * * *"
+        pollSCM "*/30 * * * *"
     }
 
     stages {
@@ -68,7 +68,7 @@ pipeline {
 
         stage("build image") {
             when {
-                branch 'master'
+                branch 'main'
             }
             steps{
                 echo '### TODO building container image ###'
@@ -88,7 +88,7 @@ pipeline {
 
         stage("push image"){
             when {
-                branch 'master'
+                branch 'main'
             }
             steps{
                 echo '### TODO: pushing image to ${HARBOR_URL} ###'
