@@ -1,0 +1,7 @@
+- job:
+    name: 'dice-simulation-job'
+    project-type: multibranch
+    scm:
+      - git:
+          url: 'https://github.com/larinde/dice-simulation.git'
+          head-filter-regex: 'main|dev|feature-.*'

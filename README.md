@@ -10,6 +10,7 @@
 This implementation is based on Spring Boot and embedded Tomcat container frameworks.
 The running application is accessible through the default container port - 7000
 
+
 ```bash
  mvn clean package
  java -jar target/dice-simulation.jar
