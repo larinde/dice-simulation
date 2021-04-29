@@ -6,6 +6,7 @@ pipeline {
         HARBOR_URL = 'http://...'
         //requires "Credentials Binding" Plugin
         //SERVER_CREDENTIALS = credentials('gitlab-credentials')
+        CONTAINER_IMAGE_BRANCH = 'main'
     }
 
     parameters {
@@ -68,7 +69,7 @@ pipeline {
 
         stage("build image") {
             when {
-                branch 'main'
+                branch CONTAINER_IMAGE_BRANCH
             }
             steps{
                 echo '### TODO building container image ###'
@@ -88,7 +89,7 @@ pipeline {
 
         stage("push image"){
             when {
-                branch 'main'
+                branch CONTAINER_IMAGE_BRANCH
             }
             steps{
                 echo '### TODO: pushing image to ${HARBOR_URL} ###'
